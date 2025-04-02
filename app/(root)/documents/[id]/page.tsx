@@ -1,9 +1,14 @@
+import CollaborativeRoom from "@/components/CollaborativeRoom"
 
-const Document = () => {
+const Document = async ({params} : SearchParamProps) => {
+  const {id} = await params;
+  
   return (
-    <div>
-      
-    </div>
+    <main className="flex w-full flex-col items-center">
+      <CollaborativeRoom
+      roomId={id}
+      />
+    </main>
   )
 }
 

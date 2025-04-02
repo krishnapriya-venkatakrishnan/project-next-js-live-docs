@@ -15,9 +15,9 @@ import {
 } from '@clerk/nextjs'
 
 // whenever a user generates a document, we will create a new id
-const CollaborativeRoom = () => {
+const CollaborativeRoom = ({roomId}: {roomId: string}) => {
   return (
-    <RoomProvider id="my-room">
+    <RoomProvider id={roomId}>
       <ClientSideSuspense fallback={<div>Loading…</div>}>
         <div className="collaborative-room">
           <Header>

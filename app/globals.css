@@ -40,17 +40,17 @@
 }
 
 @theme {
-  --color-blue-100: '#B4C6EE';
-  --color-blue-400: '#417BFF';
-  --color-blue-500: '#3371FF';
-  --color-red-400: '#DD4F56';
-  --color-red-500: '#DC4349';
-  --color-dark-100: '#09111F';
-  --color-dark-200: '#0B1527';
-  --color-dark-300: '#0F1C34';
-  --color-dark-350: '#12213B';
-  --color-dark-400: '#27344D';
-  --color-dark-500: '#2E3D5B';
+  --color-blue-100: #B4C6EE;
+  --color-blue-400: #417BFF;
+  --color-blue-500: #3371FF;
+  --color-red-400: #DD4F56;
+  --color-red-500: #DC4349;
+  --color-dark-100: #09111F;
+  --color-dark-200: #0B1527;
+  --color-dark-300: #0F1C34;
+  --color-dark-350: #12213B;
+  --color-dark-400: #27344D;
+  --color-dark-500: #2E3D5B;
 
   /* --bg-doc: 'url(/assets/images/doc.png)';
   --bg-modal: 'url(/assets/images/modal.png)'; */
