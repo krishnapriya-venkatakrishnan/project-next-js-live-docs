@@ -37,6 +37,7 @@ const Document = async ({params} : SearchParamProps) => {
       roomId={id}
       roomMetadata={room.metadata}
       users={usersData}
+      currentUser={clerkUser.id}
       currentUserType={currentUserType}
       />
     </main>

@@ -27,7 +27,8 @@ function Placeholder() {
   return <div className="editor-placeholder">Enter some rich text...</div>;
 }
 
-export function Editor({ roomId, currentUserType }: { roomId: string, currentUserType: UserType }) {
+export function Editor({ roomId, currentUser,currentUserType, creatorId }: { roomId: string, currentUser: string, currentUserType: UserType, creatorId: string }) {
+  
   const status = useEditorStatus();
   const { threads } = useThreads();
 
@@ -47,13 +48,13 @@ export function Editor({ roomId, currentUserType }: { roomId: string, currentUse
       <div className="editor-container size-full">
         <div className="toolbar-wrapper flex min-w-full justify-between">
           <ToolbarPlugin />
-          {currentUserType === 'editor' && <DeleteModal roomId={roomId} />}
+          {currentUser === creatorId && <DeleteModal roomId={roomId} />}
         </div>
 
-        <div className="editor-wrapper flex items-start justify-center">
+        <div className="editor-wrapper flex items-start justify-center max-sm:flex-col">
           {status === 'not-loaded' || status === 'loading' ? <Loader /> : (
             
-            <div className="editor-inner min-h-[1100px] relative mb-5 h-fit w-full max-w-[800px] shadow-md lg:mb-10">
+            <div className="editor-inner min-h-[1100px] relative mb-5 h-fit w-full max-w-[800px] shadow-md lg:mb-10 max-sm:mt-155">
               
               <RichTextPlugin
                 contentEditable={

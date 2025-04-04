@@ -67,6 +67,7 @@ declare type CollaborativeRoomProps = {
   roomId: string;
   roomMetadata: RoomMetadata;
   users: User[];
+  currentUser: string;
   currentUserType: UserType;
 };
 

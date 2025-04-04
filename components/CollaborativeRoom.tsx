@@ -22,7 +22,7 @@ import { updateDocument } from "@/lib/actions/room.actions";
 import ShareModal from "./ShareModal";
 
 // whenever a user generates a document, we will create a new id
-const CollaborativeRoom = ({ roomId, roomMetadata, users, currentUserType }: CollaborativeRoomProps) => {
+const CollaborativeRoom = ({ roomId, roomMetadata, users, currentUser, currentUserType }: CollaborativeRoomProps) => {
 
   const [editing, setEditing] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -136,7 +136,7 @@ const CollaborativeRoom = ({ roomId, roomMetadata, users, currentUserType }: Col
               </SignedIn>
             </div>
           </Header>
-          <Editor roomId={roomId} currentUserType={currentUserType} />
+          <Editor roomId={roomId} currentUser={currentUser} currentUserType={currentUserType} creatorId={roomMetadata.creatorId} />
         </div>
       </ClientSideSuspense>
     </RoomProvider>
