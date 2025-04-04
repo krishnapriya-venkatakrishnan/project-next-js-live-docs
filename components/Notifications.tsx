@@ -43,7 +43,7 @@ const Notifications = () => {
         >
           <InboxNotificationList>
             {unreadNotifications.length <=0 && (
-              <p className="py-2 text-center text-dark-500">No new notifications</p>
+              <p className="py-2 text-center bg-dark-200 text-white">No new notifications</p>
             )}
 
             {unreadNotifications.length > 0 && unreadNotifications.map((notification)=> (
