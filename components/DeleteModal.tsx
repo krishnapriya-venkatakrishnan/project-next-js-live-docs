@@ -44,7 +44,7 @@ export const DeleteModal = ({ roomId }: DeleteModalProps) => {
             alt="delete"
             width={20}
             height={20}
-            className="mt-1"
+            className="mt-1 cursor-pointer"
           />
         </Button>
       </DialogTrigger>
@@ -72,7 +72,7 @@ export const DeleteModal = ({ roomId }: DeleteModalProps) => {
           <Button
             variant="destructive"
             onClick={deleteDocumentHandler}
-            className="gradient-red w-full"
+            className="gradient-red w-full cursor-pointer"
           >
             {loading ? "Deleting..." : "Delete"}
           </Button>
