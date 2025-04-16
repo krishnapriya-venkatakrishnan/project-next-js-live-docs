@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📄 LiveDocs- Collaborative Document Editor
+The **Collaborative Document Editor** – a modern, real-time editing platform built with **Next.js**, **Clerk Authentication**, and **Liveblocks**. This app allows users to create, collaborate, and share documents with rich permission controls and live commenting functionality.
 
-## Getting Started
+Users can:
+- 📑 Create and manage their documents
+- ✍️ Collaborate in real-time with others
+- 🔐 Control access (view or edit)
+- 💬 Comment and communicate within the document
+- 🔔 Stay notified with in-app updates
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📘 Documentation Index
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Section | Description |
+|--------|-------------|
+| [`Project setup and strucure.md`](./Project%20setup%20and%20structure.md) | 🏠 Details the home page setup, user authentication, and document creation logic |
+| [`Server Actions.md`](./Server%20Actions.md) | 📄 Explains document fetching, permission checks, and real-time collaboration logic |
+| [`Component details.md`](./Component%20details.md) | 🧩 Breakdown of reusable components like Modals, Notifications, Editor, Comments, and Share features |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Tech Stack
 
-## Learn More
+- **Frontend**: React + Next.js App Router
+- **Authentication**: Clerk.dev
+- **Collaboration**: Liveblocks
+- **Styling**: TailwindCSS
+- **State & Realtime**: React hooks + Liveblocks APIs
+- **Routing**: App Router + Server Actions
+- **Rich Text Editor**: Lexical + Liveblocks Lexical Plugin
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
