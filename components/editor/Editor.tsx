@@ -45,20 +45,18 @@ export function Editor({ roomId, currentUser,currentUserType, creatorId }: { roo
 
   return (
     <LexicalComposer initialConfig={initialConfig}>
-      <div className="editor-container size-full">
-        <div className="toolbar-wrapper flex min-w-full justify-between">
+      <div className="editor-container size-full h-[100dvh]">
+        <div className="toolbar-wrapper flex min-w-full justify-between h-1/12">
           <ToolbarPlugin />
           {currentUser === creatorId && <DeleteModal roomId={roomId} />}
         </div>
 
-        <div className="editor-wrapper flex items-start justify-center max-sm:flex-col">
+        <div className="h-10/12 lg:h-11/12 flex items-start max-lg:flex-col max-lg:items-center justify-start">
           {status === 'not-loaded' || status === 'loading' ? <Loader /> : (
-            
-            <div className="editor-inner min-h-[1100px] relative mb-5 h-fit w-full max-w-[800px] shadow-md lg:mb-10 max-sm:mt-155">
-              
+            <div className='relative flex flex-1 h-2/3 w-full shadow-xl lg:h-full'>
               <RichTextPlugin
                 contentEditable={
-                  <ContentEditable className="editor-input h-full" />
+                  <ContentEditable className="editor-input !min-h-[300px] shadow-md w-full custom-scrollbar overflow-y-scroll" />
                 }
                 placeholder={<Placeholder />}
                 ErrorBoundary={LexicalErrorBoundary}
@@ -68,11 +66,13 @@ export function Editor({ roomId, currentUser,currentUserType, creatorId }: { roo
               <AutoFocusPlugin />
             </div>
           )}
-          <LiveblocksPlugin>
-            <FloatingComposer className="w-[350px]" />
-            <FloatingThreads threads={threads} />
-            <Comments />
-          </LiveblocksPlugin>
+          <div className='h-1/3 min-h-[100px] overflow-y-scroll custom-scrollbar lg:h-full'>
+              <LiveblocksPlugin>
+                <FloatingComposer className="w-[350px]" />
+                <FloatingThreads threads={threads} />
+                <Comments />
+              </LiveblocksPlugin>
+          </div>
         </div>
       </div>
     </LexicalComposer>
