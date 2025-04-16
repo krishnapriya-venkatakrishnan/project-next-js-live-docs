@@ -31,3 +31,11 @@ Users can:
 - **Rich Text Editor**: Lexical + Liveblocks Lexical Plugin
 
 ---
+
+## 🌐 Vercel Deployment
+
+You can view the live project here:
+
+🔗 [**Live Demo on Vercel**](https://project-live-docs.vercel.app/)
+
+---
