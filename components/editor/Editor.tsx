@@ -46,13 +46,13 @@ export function Editor({ roomId, currentUser,currentUserType, creatorId }: { roo
 
   return (
     <LexicalComposer initialConfig={initialConfig}>
-      <div className="editor-container size-full h-[100dvh]">
+      <div className="editor-container size-full h-[100dvh] md:h-[90dvh] md:mt-[130px]">
         <div className="toolbar-wrapper flex min-w-full justify-between h-1/12">
           <ToolbarPlugin />
           {currentUser === creatorId && <DeleteModal roomId={roomId} />}
         </div>
 
-        <div className="h-10/12 lg:h-11/12 flex items-start max-lg:flex-col max-lg:items-center justify-start">
+        <div className="h-10/12 flex items-start max-lg:flex-col max-lg:items-center justify-start">
           {status === 'not-loaded' || status === 'loading' ? <Loader /> : (
             <div className='relative flex flex-1 h-2/3 w-full shadow-xl lg:h-full'>
               <RichTextPlugin
