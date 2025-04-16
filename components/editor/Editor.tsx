@@ -18,6 +18,7 @@ import FloatingToolbarPlugin from './plugins/FloatingToolbarPlugin'
 import { useThreads } from '@liveblocks/react/suspense';
 import Comments from '../Comments';
 import { DeleteModal } from '../DeleteModal';
+import { cn } from '@/lib/utils';
 
 // Catch any errors that occur during Lexical updates and log them
 // or throw them as needed. If you don't throw them, Lexical will
@@ -66,7 +67,7 @@ export function Editor({ roomId, currentUser,currentUserType, creatorId }: { roo
               <AutoFocusPlugin />
             </div>
           )}
-          <div className='h-1/3 min-h-[100px] overflow-y-scroll custom-scrollbar lg:h-full'>
+          <div className={cn('max-lg:max-w-full max-lg:px-1 max-lg:pt-4 h-1/3 min-h-[100px] overflow-y-scroll custom-scrollbar lg:h-full', threads.length === 0 && "overflow-hidden")}>
               <LiveblocksPlugin>
                 <FloatingComposer className="w-[350px]" />
                 <FloatingThreads threads={threads} />

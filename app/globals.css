@@ -195,11 +195,11 @@
 }
 
 @utility comments-container {
-  @apply mb-10 space-y-4 lg:w-fit flex w-full flex-col items-center justify-center;
+  @apply mb-10 space-y-4 lg:w-fit flex w-full flex-col items-center justify-center max-lg:px-2;
 }
 
 @utility comment-composer {
-  @apply w-full min-w-[400px] max-w-[800px] border border-dark-300 bg-dark-200 shadow-sm lg:w-[350px];
+  @apply w-full min-w-[350px] max-w-[800px] border border-dark-300 bg-dark-200 shadow-sm lg:w-[350px];
 }
 
 @utility comment-thread {
