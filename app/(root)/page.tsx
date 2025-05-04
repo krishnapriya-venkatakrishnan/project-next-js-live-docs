@@ -27,10 +27,13 @@ const Home = async () => {
           </SignedIn>
         </div>
       </Header>
-
       {
         roomDocuments.data.length > 0 
         ? (<div className="document-list-container md:mt-30">
+            <div className="max-w-[800px] text-center">
+              <h2 className="text-[1.25rem]">A collaborative document editor- your modern workspace for creating, editing, and sharing documents- solo or with your team.</h2>
+            </div>
+      
             <div className="document-list-title">
               <h3 className="text-28-semibold">
                 All documents
@@ -72,20 +75,27 @@ const Home = async () => {
               ))}
             </ul>
         </div>) 
-        : (<div className="document-list-empty">
-          <Image
-          src="/assets/icons/doc.svg"
-          alt="document"
-          width={40}
-          height={40}
-          className="mx-auto"
-          />
+        : (
+        <>
+          <div className="max-w-[800px] text-center md:mt-30">
+            <h2 className="text-[1.25rem]">A collaborative document editor- your modern workspace for creating, editing, and sharing documents- solo or with your team.</h2>
+          </div>
+          <div className="document-list-empty">
+            
+            <Image
+            src="/assets/icons/doc.svg"
+            alt="document"
+            width={40}
+            height={40}
+            className="mx-auto"
+            />
 
-          <AddDocumentBtn
-          userId = {clerkUser.id}
-          email = {clerkUser.emailAddresses[0].emailAddress}
-          />
-        </div>)
+            <AddDocumentBtn
+            userId = {clerkUser.id}
+            email = {clerkUser.emailAddresses[0].emailAddress}
+            />
+          </div>
+        </>)
       }
     </main>
   )
